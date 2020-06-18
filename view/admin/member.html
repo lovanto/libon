@@ -15,7 +15,7 @@
         }
 
         .background {
-            background-image: url(../../images/background/perpus2.jpg);
+            background-image: url(../../images/background/perpus3.png);
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
@@ -44,7 +44,7 @@
                     </a>
                 </td>
                 <td width="30px">
-                    <a href="../../homeuser.html">
+                    <a href="../../homeadmin.html">
                         <font class="navtext zoom">Beranda</font>
                     </a>
                 </td>
@@ -84,86 +84,90 @@
                                             <h1>Data Pustakawan</h1>
                                             <hr style="margin-bottom: 20px;">
                                             <div>
-                                                <table width="100%" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="125" align="left" valign="top">No.Pustakawan
-                                                            </td>
-                                                            <form action="php/code3.php" method="POST">
-                                                                <td width="417" align="left" valign="top"
+                                                <form action="php/code.php" method="POST">
+                                                    <table width="100%" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="125" align="left" valign="top">No.Member</td>
+                                                                <form action="php/code3.php" method="POST">
+                                                                    <td width="417" align="left" valign="top"
+                                                                        style="padding-right: 20px"><input type="text"
+                                                                            name="no_mem" placeholder="Nomor Member"
+                                                                            class="form-control" required /></td>
+                                                                    <td width="156" align="left" valign="top">Alamat
+                                                                    </td>
+                                                                    <td width="467" align="left" valign="top"
+                                                                        rowspan="2"><textarea name="alamat"
+                                                                            id="noresize" class="form-control" rows="3"
+                                                                            placeholder="Alamat" required></textarea>
+                                                                    </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Nama</td>
+                                                                <td align="left" valign="top"
                                                                     style="padding-right: 20px"><input type="text"
-                                                                        name="no_pus" placeholder="Nomor Pustakawan"
+                                                                        name="nama" placeholder="Nama Lengkap"
                                                                         class="form-control" required /></td>
-                                                                <td width="156" align="left" valign="top">Alamat
-                                                                </td>
-                                                                <td width="467" align="left" valign="top" rowspan="2">
-                                                                    <textarea name="alamat" id="noresize"
-                                                                        class="form-control" rows="3"
-                                                                        placeholder="Alamat" required></textarea>
-                                                                </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top">Nama</td>
-                                                            <td align="left" valign="top" style="padding-right: 20px">
-                                                                <input type="text" name="nama"
-                                                                    placeholder="Nama Lengkap" class="form-control"
-                                                                    required /></td>
-                                                            <td align="left" valign="top">&nbsp;</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top">Tempat Lahir</td>
-                                                            <td align="left" valign="top" style="padding-right: 20px">
-                                                                <input type="text" name="tempat"
-                                                                    placeholder="Tempat Lahir" class="form-control"
-                                                                    required /></td>
-                                                            <td align="left" valign="top">Tanggal Lahir</td>
-                                                            <td align="left" valign="top"><input type="date"
-                                                                    name="tanggal" placeholder="Tanggal Lahir"
-                                                                    class="form-control" required /></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top">Kelamin</td>
-                                                            <td align="left" valign="top" style="padding-right: 20px">
-                                                                <select name="kelamin" id="select" class="form-control"
-                                                                    required>
-                                                                    <option value="Laki Laki">Laki Laki</option>
-                                                                    <option value="Perempuan">Perempuan</option>
-                                                                </select></td>
-                                                            <td align="left" valign="top">No.Telp</td>
-                                                            <td align="left" valign="top"><input type="text" name="telp"
-                                                                    placeholder="Nomor Telp" class="form-control"
-                                                                    required /></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top">Email</td>
-                                                            <td align="left" valign="top" style="padding-right: 20px">
-                                                                <input type="email" name="email"
-                                                                    placeholder="Alamat Email" class="form-control"
-                                                                    required /></td>
-                                                            <td align="left" valign="top">Password</td>
-                                                            <td align="left" valign="top"><input type="password"
-                                                                    name="password" placeholder="Password"
-                                                                    class="form-control" required /></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <input type="submit" value="Simpan Pustakawan" name="Submit"
-                                                    class="btn btn-primary" style="float: right;" />
+                                                                <td align="left" valign="top">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Tempat Lahir</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px"><input type="text"
+                                                                        name="tempat" placeholder="Tempat Lahir"
+                                                                        class="form-control" required /></td>
+                                                                <td align="left" valign="top">Tanggal Lahir</td>
+                                                                <td align="left" valign="top"><input type="date"
+                                                                        name="tanggal" placeholder="Tanggal Lahir"
+                                                                        class="form-control" required /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Kelamin</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px">
+                                                                    <select name="kelamin" id="select"
+                                                                        class="form-control" required>
+                                                                        <option value="Laki Laki">Laki Laki</option>
+                                                                        <option value="Perempuan">Perempuan</option>
+                                                                    </select></td>
+                                                                <td align="left" valign="top">No.Telp</td>
+                                                                <td align="left" valign="top"><input type="text"
+                                                                        name="telp" placeholder="Nomor Telp"
+                                                                        class="form-control" required /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Email</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px"><input type="email"
+                                                                        name="email" placeholder="Alamat Email"
+                                                                        class="form-control" required /></td>
+                                                                <td align="left" valign="top">Password</td>
+                                                                <td align="left" valign="top"><input type="password"
+                                                                        name="password" placeholder="Password"
+                                                                        class="form-control" required /></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <input type="submit" value="Simpan Member" name="Submit"
+                                                        class="btn btn-primary" style="float: right;" />
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- halaman -->
-                                    <div class="input-group col-md-5 col-md-offset-7"
-                                        style="float: left; margin-left: 30px;">
-                                        <span class="input-group-addon" id="basic-addon1"><span
-                                                class="glyphicon glyphicon-search"></span></span>
-                                        <input type="text" name="input_cari" placeholder="Cari Disini"
-                                            class="form-control" style="width: 300px;" />
-                                    </div>
-                                    <input type="submit" name="cari" value="Cari" class="btn btn-primary"
-                                        style="float: left;" />
-                                    <input type="submit" name="tampil" value="Semua Data" class="btn btn-primary"
-                                        style="float: left; margin-left: 10px;" />
+                                    <form action="" method="POST" name="filter">
+                                        <div class="input-group col-md-5 col-md-offset-7"
+                                            style="float: left; margin-left: 15px;">
+                                            <span class="input-group-addon" id="basic-addon1"><span
+                                                    class="glyphicon glyphicon-search"></span></span>
+                                            <input type="text" name="input_cari" placeholder="Cari Disini"
+                                                class="form-control" style="width: 300px;" />
+                                        </div>
+                                        <input type="submit" name="cari" value="Cari" class="btn btn-primary"
+                                            style="float: left;" />
+                                        <input type="submit" name="tampil" value="Semua Data" class="btn btn-primary"
+                                            style="float: left; margin-left: 10px;" />
+                                    </form>
                                     <a href="#open-modal"><button class="btn btn-primary" type="submit"
                                             style="float: right; margin-right: 30px;">Tambah Data</button></a>
                                     <br />
@@ -172,32 +176,16 @@
                                         <table border="0">
                                             <thead>
                                                 <tr>
+                                                    <th scope="col" style="width: 30px; text-align: center;">#</th>
+                                                    <th scope="col" style="width: 100px;">No.Member</th>
+                                                    <th scope="col" style="width: 150px;">Nama</th>
+                                                    <th scope="col" style="width: 200px;">TTL</th>
+                                                    <th scope="col" style="width: 100px;">Kelamin</th>
+                                                    <th scope="col" style="width: 100px;">No.Telp</th>
+                                                    <th scope="col" style="width: 300px;">Alamat</th>
+                                                    <th scope="col" style="width: 150px;">Email</th>
                                                     <th scope="col"
-                                                        style="width: 30px; text-align: center; padding-right: 5px; padding-left: 5px;">
-                                                        #</th>
-                                                    <th scope="col"
-                                                        style="width: 100px; padding-right: 5px; padding-left: 5px;">
-                                                        No.Pustakawan</th>
-                                                    <th scope="col"
-                                                        style="width: 150px; padding-right: 5px; padding-left: 5px;">
-                                                        Nama</th>
-                                                    <th scope="col"
-                                                        style="width: 200px; padding-right: 5px; padding-left: 5px;">TTL
-                                                    </th>
-                                                    <th scope="col"
-                                                        style="width: 100px; padding-right: 5px; padding-left: 5px;">
-                                                        Kelamin</th>
-                                                    <th scope="col"
-                                                        style="width: 100px; padding-right: 5px; padding-left: 5px;">
-                                                        No.Telp</th>
-                                                    <th scope="col"
-                                                        style="width: 300px; padding-right: 5px; padding-left: 5px;">
-                                                        Alamat</th>
-                                                    <th scope="col"
-                                                        style="width: 150px; padding-right: 5px; padding-left: 5px;">
-                                                        Email</th>
-                                                    <th scope="col"
-                                                        style="width: 250px; padding-right: 5px; padding-left: 5px; text-align: center; vertical-align : center;">
+                                                        style="width: 200px; text-align: center; vertical-align : center;">
                                                         Opsi</th>
                                                 </tr>
                                             </thead>
@@ -214,7 +202,10 @@
                                                 <td style="vertical-align: top;">rifkylovanto@gmail.com</td>
                                                 <td
                                                     style="vertical-align: top; text-align: center; vertical-align : center;">
-                                                    <a href=""><button class="btn btn-primary">Pinjam</button></a>
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -230,7 +221,10 @@
                                                 <td style="vertical-align: top;">faisalyahya@gmail.com</td>
                                                 <td
                                                     style="vertical-align: top; text-align: center; vertical-align : center;">
-                                                    <a href=""><button class="btn btn-primary">Pinjam</button></a>
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -246,7 +240,10 @@
                                                 <td style="vertical-align: top;">kaniadevita@gmail.com</td>
                                                 <td
                                                     style="vertical-align: top; text-align: center; vertical-align : center;">
-                                                    <a href=""><button class="btn btn-primary">Pinjam</button></a>
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
                                                 </td>
                                             </tr>
                                             <tfoot>

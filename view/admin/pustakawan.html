@@ -15,7 +15,7 @@
         }
 
         .background {
-            background-image: url(../../images/background/perpus2.jpg);
+            background-image: url(../../images/background/perpus3.png);
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
@@ -23,18 +23,6 @@
 
         .fontku {
             font-size: 13px;
-        }
-
-        .fontTable {
-            font-size: 15px;
-        }
-
-        #img-upload {
-            width: 120px;
-        }
-
-        .backgroundTable {
-            background-color: #BDBDBD;
         }
     </style>
 </head>
@@ -56,7 +44,7 @@
                     </a>
                 </td>
                 <td width="30px">
-                    <a href="../../homeuser.html">
+                    <a href="../../homeadmin.html">
                         <font class="navtext zoom">Beranda</font>
                     </a>
                 </td>
@@ -86,174 +74,188 @@
                             <div
                                 style="background-color: hsla(0, 0%, 100%, 0.71); width: 100%; height: 870px; border-radius: 5px;">
                                 <!-- DISINI -->
-                                <div style="overflow: scroll; height: 870px; padding: 0 20px 0 20px;" class="fontku">
-                                    <br />
+                                <div style=" padding-top: 20px; overflow: scroll; height: 870px;" class="fontku">
                                     <!--  modal   -->
                                     <div id="open-modal" class="modal-window">
                                         <div style="width: 800px; height: 300px;">
                                             <a href="#" title="Close" class="modal-close">
                                                 <font size="5">&times;</font>
                                             </a>
-                                            <h1>Data Buku</h1>
+                                            <h1>Data Pustakawan</h1>
                                             <hr style="margin-bottom: 20px;">
                                             <div>
-                                                <table width="100%" border="0" class="fontTable">
+                                                <table width="100%" border="0">
                                                     <tbody>
                                                         <tr>
-                                                            <td width="9%" align="left" valign="middle">Nomor Buku
+                                                            <td width="125" align="left" valign="top">No.Pustakawan
                                                             </td>
-                                                            <td width="41%" align="left" valign="middle"><input
-                                                                    type="text" class="form-control" name="nomor"
-                                                                    placeholder="Nomor Buku" style="width: 120px;"
-                                                                    required></td>
-                                                            <td width="6%" align="left" valign="middle">Judul</td>
-                                                            <td width="44%" align="left" valign="middle"><input
-                                                                    type="text" class="form-control" name="judul"
-                                                                    placeholder="Judul Buku" style="width: 230px;"
-                                                                    required></td>
+                                                            <form action="php/code3.php" method="POST">
+                                                                <td width="417" align="left" valign="top"
+                                                                    style="padding-right: 20px"><input type="text"
+                                                                        name="no_pus" placeholder="Nomor Pustakawan"
+                                                                        class="form-control" required /></td>
+                                                                <td width="156" align="left" valign="top">Alamat
+                                                                </td>
+                                                                <td width="467" align="left" valign="top" rowspan="2">
+                                                                    <textarea name="alamat" id="noresize"
+                                                                        class="form-control" rows="3"
+                                                                        placeholder="Alamat" required></textarea>
+                                                                </td>
                                                         </tr>
                                                         <tr>
-                                                            <td rowspan="4" align="left" valign="top">Sampul</td>
-                                                            <td rowspan="4" align="left" valign="middle">
-                                                                <div class="form-group">
-                                                                    <img id='img-upload' class="zoom" />
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-btn">
-                                                                            <span class="btn btn-default btn-file"
-                                                                                style="margin-right: 20px;">
-                                                                                <input type="file" id="imgInp">
-                                                                            </span>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td align="left" valign="middle">Penulis</td>
-                                                            <td align="left" valign="middle"><input type="text"
-                                                                    class="form-control" name="penulis"
-                                                                    placeholder="Penulis" style="width: 200px;"
-                                                                    required></td>
+                                                            <td align="left" valign="top">Nama</td>
+                                                            <td align="left" valign="top" style="padding-right: 20px">
+                                                                <input type="text" name="nama"
+                                                                    placeholder="Nama Lengkap" class="form-control"
+                                                                    required /></td>
+                                                            <td align="left" valign="top">&nbsp;</td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="left" valign="middle">Penerbit</td>
-                                                            <td align="left" valign="middle"><input type="text"
-                                                                    class="form-control" name="penerbit"
-                                                                    placeholder="Penerbit" style="width: 200px;"
-                                                                    required></td>
+                                                            <td align="left" valign="top">Tempat Lahir</td>
+                                                            <td align="left" valign="top" style="padding-right: 20px">
+                                                                <input type="text" name="tempat"
+                                                                    placeholder="Tempat Lahir" class="form-control"
+                                                                    required /></td>
+                                                            <td align="left" valign="top">Tanggal Lahir</td>
+                                                            <td align="left" valign="top"><input type="date"
+                                                                    name="tanggal" placeholder="Tanggal Lahir"
+                                                                    class="form-control" required /></td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="left" valign="middle">Kategori</td>
-                                                            <td align="left" valign="middle"><select
-                                                                    class="form-control" name="kategori"
-                                                                    style="width: 150px;" required>
-                                                                    <option value="Pendidikan">Pendidikan</option>
-                                                                    <option value="Ensiklopedia">Ensiklopedia
-                                                                    </option>
-                                                                    <option value="Novel">Novel</option>
-                                                                    <option value="Majalah">Majalah</option>
+                                                            <td align="left" valign="top">Kelamin</td>
+                                                            <td align="left" valign="top" style="padding-right: 20px">
+                                                                <select name="kelamin" id="select" class="form-control"
+                                                                    required>
+                                                                    <option value="Laki Laki">Laki Laki</option>
+                                                                    <option value="Perempuan">Perempuan</option>
                                                                 </select></td>
+                                                            <td align="left" valign="top">No.Telp</td>
+                                                            <td align="left" valign="top"><input type="text" name="telp"
+                                                                    placeholder="Nomor Telp" class="form-control"
+                                                                    required /></td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="left" valign="middle">Tahun Terbit</td>
-                                                            <td align="left" valign="middle"><input type="text"
-                                                                    class="form-control" name="tahun"
-                                                                    placeholder="Tahun Terbit" style="width: 120px;"
-                                                                    required></td>
-                                                            <td width="0%"></td>
+                                                            <td align="left" valign="top">Email</td>
+                                                            <td align="left" valign="top" style="padding-right: 20px">
+                                                                <input type="email" name="email"
+                                                                    placeholder="Alamat Email" class="form-control"
+                                                                    required /></td>
+                                                            <td align="left" valign="top">Password</td>
+                                                            <td align="left" valign="top"><input type="password"
+                                                                    name="password" placeholder="Password"
+                                                                    class="form-control" required /></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                <input type="submit" value="Simpan Buku" name="Submit"
+                                                <input type="submit" value="Simpan Pustakawan" name="Submit"
                                                     class="btn btn-primary" style="float: right;" />
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div style="margin-top: 15px;">
-                                        <form action="" method="POST" name="filter">
-                                            <div class="input-group col-md-5 col-md-offset-7"
-                                                style="float: left; margin-left: 25px;">
-                                                <input type="text" name="input_cari" placeholder="Cari Disini"
-                                                    class="form-control" style="width:300px;" />
-                                            </div>
-                                            <input type="submit" name="cari" value="Cari" class="btn btn-primary"
-                                                style="float: left; margin-left: 20px;" />
-                                            <input type="submit" name="tampil" value="Semua Data"
-                                                class="btn btn-primary" style="float: left; margin-left: 10px;" />
-                                        </form>
-                                        <a href="#open-modal"><button class="btn btn-primary" type="submit"
-                                                style="float: right; margin-right: 10px;">Tambah Data</button></a>
+                                    <!-- halaman -->
+                                    <div class="input-group col-md-5 col-md-offset-7"
+                                        style="float: left; margin-left: 30px;">
+                                        <span class="input-group-addon" id="basic-addon1"><span
+                                                class="glyphicon glyphicon-search"></span></span>
+                                        <input type="text" name="input_cari" placeholder="Cari Disini"
+                                            class="form-control" style="width: 300px;" />
                                     </div>
-                                    <div style="margin-top: 50px;">
+                                    <input type="submit" name="cari" value="Cari" class="btn btn-primary"
+                                        style="float: left;" />
+                                    <input type="submit" name="tampil" value="Semua Data" class="btn btn-primary"
+                                        style="float: left; margin-left: 10px;" />
+                                    <a href="#open-modal"><button class="btn btn-primary" type="submit"
+                                            style="float: right; margin-right: 30px;">Tambah Data</button></a>
+                                    <br />
+                                    <div style="padding: 30px;">
                                         <br>
                                         <table border="0">
                                             <thead>
                                                 <tr>
-                                                    <th style="width: 30px; vertical-align: middle; text-align: center;"
-                                                        scope="col">#</th>
-                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
-                                                        scope="col">No.Buku</th>
-                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Sampul</th>
-                                                    <th style="width: 250px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Judul Buku</th>
-                                                    <th style="width: 200px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Penulis</th>
-                                                    <th style="width: 200px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Penerbit</th>
-                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Kategori</th>
-                                                    <th style="width: 100px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Tahun Terbit</th>
-                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
-                                                        scope="col">Opsi</th>
+                                                    <th scope="col"
+                                                        style="width: 30px; text-align: center; padding-right: 5px; padding-left: 5px;">
+                                                        #</th>
+                                                    <th scope="col"
+                                                        style="width: 100px; padding-right: 5px; padding-left: 5px;">
+                                                        No.Pustakawan</th>
+                                                    <th scope="col"
+                                                        style="width: 150px; padding-right: 5px; padding-left: 5px;">
+                                                        Nama</th>
+                                                    <th scope="col"
+                                                        style="width: 200px; padding-right: 5px; padding-left: 5px;">TTL
+                                                    </th>
+                                                    <th scope="col"
+                                                        style="width: 100px; padding-right: 5px; padding-left: 5px;">
+                                                        Kelamin</th>
+                                                    <th scope="col"
+                                                        style="width: 100px; padding-right: 5px; padding-left: 5px;">
+                                                        No.Telp</th>
+                                                    <th scope="col"
+                                                        style="width: 300px; padding-right: 5px; padding-left: 5px;">
+                                                        Alamat</th>
+                                                    <th scope="col"
+                                                        style="width: 150px; padding-right: 5px; padding-left: 5px;">
+                                                        Email</th>
+                                                    <th scope="col"
+                                                        style="width: 250px; padding-right: 5px; padding-left: 5px; text-align: center; vertical-align : center;">
+                                                        Opsi</th>
                                                 </tr>
                                             </thead>
                                             <tr>
                                                 <td style="width: 30px; vertical-align: top; text-align: center;">1</td>
-                                                <td style="vertical-align: top;">6957200001</td>
-                                                <td align="center" style="vertical-align: top;"><img
-                                                        src="../../images/buku/novel1.jpg" width="80"
-                                                        style="margin-bottom: 20px;"></td>
-                                                <td style="vertical-align: top;">Laskar Pelangi</td>
-                                                <td style="vertical-align: top;">Andrea Hirata</td>
-                                                <td style="vertical-align: top;">ABC Books</td>
-                                                <td style="vertical-align: top;">Novel</td>
-                                                <td style="vertical-align: top;">2002</td>
+                                                <td style="vertical-align: top;">
+                                                    <div style="margin-bottom: 30px;">6957200001</div>
+                                                </td>
+                                                <td style="vertical-align: top;">Rifky Lovanto</td>
+                                                <td style="vertical-align: top;">Bandung, 19-09-2001</td>
+                                                <td style="vertical-align: top;">Laki Laki</td>
+                                                <td style="vertical-align: top;">087816837566</td>
+                                                <td style="vertical-align: top;">GBI Blok Ebok No.55</td>
+                                                <td style="vertical-align: top;">rifkylovanto@gmail.com</td>
                                                 <td
                                                     style="vertical-align: top; text-align: center; vertical-align : center;">
-                                                    <a href=""><button class="btn btn-primary">Pinjam</button></a>
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 30px; vertical-align: top; text-align: center;">2</td>
-                                                <td style="vertical-align: top;">6957200002</td>
-                                                <td align="center" style="vertical-align: top;"><img
-                                                        src="../../images/buku/majalah1.jpg" width="80"
-                                                        style="margin-bottom: 20px;"></td>
-                                                <td style="vertical-align: top;">Majalah Bobo</td>
-                                                <td style="vertical-align: top;">Bobo</td>
-                                                <td style="vertical-align: top;">Bobo Entertaiment</td>
-                                                <td style="vertical-align: top;">Majalah</td>
-                                                <td style="vertical-align: top;">1998</td>
+                                                <td style="vertical-align: top;">
+                                                    <div style="margin-bottom: 30px;">6957200002</div>
+                                                </td>
+                                                <td style="vertical-align: top;">Faisal Yahya</td>
+                                                <td style="vertical-align: top;">Bandung, 30-02-2000</td>
+                                                <td style="vertical-align: top;">Laki Laki</td>
+                                                <td style="vertical-align: top;">087294648291</td>
+                                                <td style="vertical-align: top;">Ujung Berung</td>
+                                                <td style="vertical-align: top;">faisalyahya@gmail.com</td>
                                                 <td
                                                     style="vertical-align: top; text-align: center; vertical-align : center;">
-                                                    <a href=""><button class="btn btn-primary">Pinjam</button></a>
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 30px; vertical-align: top; text-align: center;">3</td>
-                                                <td style="vertical-align: top;">6957200003</td>
-                                                <td align="center" style="vertical-align: top;"><img
-                                                        src="../../images/buku/pendidikan1.jpg" width="80"
-                                                        style="margin-bottom: 20px;"></td>
-                                                <td style="vertical-align: top;">Pendidikan Karakter</td>
-                                                <td style="vertical-align: top;">Pendidikan Kita</td>
-                                                <td style="vertical-align: top;">Raja Buku</td>
-                                                <td style="vertical-align: top;">Pendidikan</td>
-                                                <td style="vertical-align: top;">2007</td>
+                                                <td style="vertical-align: top;">
+                                                    <div style="margin-bottom: 30px;">6957200003</div>
+                                                </td>
+                                                <td style="vertical-align: top;">Devita Kania</td>
+                                                <td style="vertical-align: top;">Bandung, 29-10-2002</td>
+                                                <td style="vertical-align: top;">Perempuan</td>
+                                                <td style="vertical-align: top;">086371736111</td>
+                                                <td style="vertical-align: top;">Kiaracondong</td>
+                                                <td style="vertical-align: top;">kaniadevita@gmail.com</td>
                                                 <td
                                                     style="vertical-align: top; text-align: center; vertical-align : center;">
-                                                    <a href=""><button class="btn btn-primary">Pinjam</button></a>
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
                                                 </td>
                                             </tr>
                                             <tfoot>
