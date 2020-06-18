@@ -1,0 +1,366 @@
+<html>
+
+<head>
+    <title>Perpustakaan Sekolah</title>
+    <!-- icon -->
+    <link rel="icon" href="images/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../../css/modal.css">
+    <link type="text/css" rel="stylesheet" href="../../chat/style2.css" />
+    <script src="scrool.js"></script>
+    <style type="text/css">
+        a {
+            text-decoration: none;
+        }
+
+        .background {
+            background-image: url(../../images/background/perpus3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .fontku {
+            font-size: 13px;
+        }
+
+        .fontTable {
+            font-size: 15px;
+        }
+
+        #img-upload {
+            width: 120px;
+        }
+
+        .backgroundTable {
+            background-color: #BDBDBD;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- cover atas -->
+    <div class="background" style="height: 1000px;" id="top">
+        <table style="padding-top: 10px; padding-bottom: 10px;" width=100% border="0px" id="navbar">
+            <tr>
+                <td width="90px">
+                    <a href="#top">
+                        <center><img class="logo zoom" src="../../images/icon/logo.png" height="45px" width="45px">
+                        </center>
+                    </a>
+                </td>
+                <td>
+                    <a href="#top">
+                        <font class="plogo">Perpustakaan<br>&nbsp;Sekolah</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="../../homeuser.html">
+                        <font class="navtext zoom">Beranda</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="./buku.html">
+                        <font class="navtext zoom">Data&nbsp;Buku</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="./pustakawan.html">
+                        <font class="navtext zoom">Data&nbsp;Pustakan</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="./member.html">
+                        <font class="navtext zoom">Data&nbsp;Member</font>
+                    </a>
+                </td>
+                <td width="20px"></td>
+            </tr>
+        </table>
+        <div style="padding-left: 30px; padding-right: 30px; margin-top: 10px;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td width="75%" valign="top">
+                            <div
+                                style="background-color: hsla(0, 0%, 100%, 0.71); width: 100%; height: 870px; border-radius: 5px;">
+                                <!-- DISINI -->
+                                <div style="overflow: scroll; height: 870px; padding: 0 20px 0 20px;" class="fontku">
+                                    <br />
+                                    <!--  modal   -->
+                                    <div id="open-modal" class="modal-window">
+                                        <div style="width: 800px; height: 300px;">
+                                            <a href="#" title="Close" class="modal-close">
+                                                <font size="5">&times;</font>
+                                            </a>
+                                            <h1>Data Buku</h1>
+                                            <hr style="margin-bottom: 20px;">
+                                            <div>
+                                                <table width="100%" border="0" class="fontTable">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="9%" align="left" valign="middle">Nomor Buku
+                                                            </td>
+                                                            <td width="41%" align="left" valign="middle"><input
+                                                                    type="text" class="form-control" name="nomor"
+                                                                    placeholder="Nomor Buku" style="width: 120px;"
+                                                                    required></td>
+                                                            <td width="6%" align="left" valign="middle">Judul</td>
+                                                            <td width="44%" align="left" valign="middle"><input
+                                                                    type="text" class="form-control" name="judul"
+                                                                    placeholder="Judul Buku" style="width: 230px;"
+                                                                    required></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="4" align="left" valign="top">Sampul</td>
+                                                            <td rowspan="4" align="left" valign="middle">
+                                                                <div class="form-group">
+                                                                    <img id='img-upload' class="zoom" />
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-btn">
+                                                                            <span class="btn btn-default btn-file"
+                                                                                style="margin-right: 20px;">
+                                                                                <input type="file" id="imgInp">
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td align="left" valign="middle">Penulis</td>
+                                                            <td align="left" valign="middle"><input type="text"
+                                                                    class="form-control" name="penulis"
+                                                                    placeholder="Penulis" style="width: 200px;"
+                                                                    required></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle">Penerbit</td>
+                                                            <td align="left" valign="middle"><input type="text"
+                                                                    class="form-control" name="penerbit"
+                                                                    placeholder="Penerbit" style="width: 200px;"
+                                                                    required></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle">Kategori</td>
+                                                            <td align="left" valign="middle"><select
+                                                                    class="form-control" name="kategori"
+                                                                    style="width: 150px;" required>
+                                                                    <option value="Pendidikan">Pendidikan</option>
+                                                                    <option value="Ensiklopedia">Ensiklopedia
+                                                                    </option>
+                                                                    <option value="Novel">Novel</option>
+                                                                    <option value="Majalah">Majalah</option>
+                                                                </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle">Tahun Terbit</td>
+                                                            <td align="left" valign="middle"><input type="text"
+                                                                    class="form-control" name="tahun"
+                                                                    placeholder="Tahun Terbit" style="width: 120px;"
+                                                                    required></td>
+                                                            <td width="0%"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <input type="submit" value="Simpan Buku" name="Submit"
+                                                    class="btn btn-primary" style="float: right;" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 15px;">
+                                        <form action="" method="POST" name="filter">
+                                            <div class="input-group col-md-5 col-md-offset-7"
+                                                style="float: left; margin-left: 25px;">
+                                                <input type="text" name="input_cari" placeholder="Cari Disini"
+                                                    class="form-control" style="width:300px;" />
+                                            </div>
+                                            <input type="submit" name="cari" value="Cari" class="btn btn-primary"
+                                                style="float: left; margin-left: 20px;" />
+                                            <input type="submit" name="tampil" value="Semua Data"
+                                                class="btn btn-primary" style="float: left; margin-left: 10px;" />
+                                        </form>
+                                        <a href="#open-modal"><button class="btn btn-primary" type="submit"
+                                                style="float: right; margin-right: 10px;">Tambah Data</button></a>
+                                    </div>
+                                    <div style="margin-top: 50px;">
+                                        <br>
+                                        <table border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 30px; vertical-align: middle; text-align: center;"
+                                                        scope="col">#</th>
+                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
+                                                        scope="col">No.Buku</th>
+                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Sampul</th>
+                                                    <th style="width: 250px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Judul Buku</th>
+                                                    <th style="width: 200px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Penulis</th>
+                                                    <th style="width: 200px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Penerbit</th>
+                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Kategori</th>
+                                                    <th style="width: 100px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Tahun Terbit</th>
+                                                    <th style="width: 150px; vertical-align: middle; text-align: center;"
+                                                        scope="col">Opsi</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td style="width: 30px; vertical-align: top; text-align: center;">1</td>
+                                                <td style="vertical-align: top;">6957200001</td>
+                                                <td align="center" style="vertical-align: top;"><img
+                                                        src="../../images/buku/novel1.jpg" width="80"
+                                                        style="margin-bottom: 20px;"></td>
+                                                <td style="vertical-align: top;">Laskar Pelangi</td>
+                                                <td style="vertical-align: top;">Andrea Hirata</td>
+                                                <td style="vertical-align: top;">ABC Books</td>
+                                                <td style="vertical-align: top;">Novel</td>
+                                                <td style="vertical-align: top;">2002</td>
+                                                <td
+                                                    style="vertical-align: top; text-align: center; vertical-align : center;">
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 30px; vertical-align: top; text-align: center;">2</td>
+                                                <td style="vertical-align: top;">6957200002</td>
+                                                <td align="center" style="vertical-align: top;"><img
+                                                        src="../../images/buku/majalah1.jpg" width="80"
+                                                        style="margin-bottom: 20px;"></td>
+                                                <td style="vertical-align: top;">Majalah Bobo</td>
+                                                <td style="vertical-align: top;">Bobo</td>
+                                                <td style="vertical-align: top;">Bobo Entertaiment</td>
+                                                <td style="vertical-align: top;">Majalah</td>
+                                                <td style="vertical-align: top;">1998</td>
+                                                <td
+                                                    style="vertical-align: top; text-align: center; vertical-align : center;">
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 30px; vertical-align: top; text-align: center;">3</td>
+                                                <td style="vertical-align: top;">6957200003</td>
+                                                <td align="center" style="vertical-align: top;"><img
+                                                        src="../../images/buku/pendidikan1.jpg" width="80"
+                                                        style="margin-bottom: 20px;"></td>
+                                                <td style="vertical-align: top;">Pendidikan Karakter</td>
+                                                <td style="vertical-align: top;">Pendidikan Kita</td>
+                                                <td style="vertical-align: top;">Raja Buku</td>
+                                                <td style="vertical-align: top;">Pendidikan</td>
+                                                <td style="vertical-align: top;">2007</td>
+                                                <td
+                                                    style="vertical-align: top; text-align: center; vertical-align : center;">
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
+                                                </td>
+                                            </tr>
+                                            <tfoot>
+                                                <tr>
+                                                    <th align="center" valign="middle" colspan="9">&nbsp;</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div align="center"
+                                style="background-color: hsla(0, 0%, 100%, 0.71); width: 90%; height: 550px; border-radius: 5px; margin-left: 30px;">
+                                <div id="wrapper" class="data">
+                                    <div id="menu">
+                                        <p class="welcome">Selamat Datang, <b>Rifky Lovanto</b></p>
+                                        <p class="logout"><a id="exit" href="#">Keluar Chat</a></p>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                    <div id="chatbox" style="margin-top: 10px;">
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:11:51) <b>osas</b>: sjdboabwnda<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:11:51) <b>osas</b>: <br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:11:56) <b>osas</b>: kbsdoankldwbna<br>
+                                        </div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:28:21) <b>osas</b>: asdws<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:35:55) <b>osas</b>: asdadas<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:07:47) <b>osas</b>: jasd9auwhamsdnaw<br>
+                                        </div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:25:14) <b>osas</b>: oiajdosidjauwhda<br>
+                                        </div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:31:22) <b>osas</b>: ahvsdiuabdas<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:33:02) <b>osas</b>: sdasdaw<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:34:13) <b>osas</b>: ksbdiuansdl<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:35:50) <b>osas</b>: jdaisjdbans<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:35:56) <b>osas</b>: ksndoaskdna<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:36:15) <b>osas</b>: kjiol<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:36:30) <b>osas</b>: uasbdijabnsd<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:41:40) <b>osas</b>: sdadasd<br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:43:23) <b>osas</b>: sdasdawd<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:43:27) <b>osas</b>: sdawasd<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:44:04) <b></b>: iskdoasn<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:44:22) <b>madDog</b>: sdawasda<br></div>
+                                        <div class='msgln'><i>madDog telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:46:36) <b>madDog</b>: sdawawsdw<br></div>
+                                        <div class='msgln'><i>madDog telah meninggalkan ruang obrolan.</i><br></div>
+                                    </div>
+
+                                    <form name="message" action="">
+                                        <input name="usermsg" type="text" id="usermsg" class="form-control" />
+                                        <input name="submitmsg" class="btn btn-primary" type="submit" id="submitmsg"
+                                            value="Kirim" style="width: 70%" />
+                                    </form>
+                                </div>
+                            </div>
+        </div>
+        <br>
+        <div class="data" align="center"
+            style="background-color: hsla(0, 0%, 100%, 0.71); width: 90%; height: 220px; border-radius: 5px; margin-left: 30px; padding-top: 15px;">
+            <font style="font-size: 14px; font-weight: bolder;">DATA ANDA</font>
+            <br>
+            <img src="../../images/icon/person.png" width="80px;" height="80px;" style="margin-top: 7px;">
+            <p style="font-weight: bolder; margin-top: 15px;">1302194068</p>
+            <p style="font-weight: bolder; margin-top: 10px;">lovanto</p>
+            <p style="font-weight: bolder; margin-top: 10px;">Rifky Lovanto</p>
+        </div>
+        <br>
+        <form action="../../index.html">
+            <button class="btn" type="submit"
+                style="width: 90%; margin-left: 30px; height: 50px; background-color: #D50000">
+                <font color="#fff" style="font-weight: bolder;">LOGOUT</font>
+            </button>
+        </form>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>

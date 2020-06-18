@@ -1,0 +1,347 @@
+<html>
+
+<head>
+    <title>Perpustakaan Sekolah</title>
+    <!-- icon -->
+    <link rel="icon" href="images/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../../css/modal.css">
+    <link type="text/css" rel="stylesheet" href="../../chat/style2.css" />
+    <script src="scrool.js"></script>
+    <style type="text/css">
+        a {
+            text-decoration: none;
+        }
+
+        .background {
+            background-image: url(../../images/background/perpus3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .fontku {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- cover atas -->
+    <div class="background" style="height: 1000px;" id="top">
+        <table style="padding-top: 10px; padding-bottom: 10px;" width=100% border="0px" id="navbar">
+            <tr>
+                <td width="90px">
+                    <a href="#top">
+                        <center><img class="logo zoom" src="../../images/icon/logo.png" height="45px" width="45px">
+                        </center>
+                    </a>
+                </td>
+                <td>
+                    <a href="#top">
+                        <font class="plogo">Perpustakaan<br>&nbsp;Sekolah</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="../../homeadmin.html">
+                        <font class="navtext zoom">Beranda</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="./buku.html">
+                        <font class="navtext zoom">Data&nbsp;Buku</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="./pustakawan.html">
+                        <font class="navtext zoom">Data&nbsp;Pustakan</font>
+                    </a>
+                </td>
+                <td width="30px">
+                    <a href="./member.html">
+                        <font class="navtext zoom">Data&nbsp;Member</font>
+                    </a>
+                </td>
+                <td width="20px"></td>
+            </tr>
+        </table>
+        <div style="padding-left: 30px; padding-right: 30px; margin-top: 10px;">
+            <table width="100%" border="0">
+                <tbody>
+                    <tr>
+                        <td width="75%" valign="top">
+                            <div
+                                style="background-color: hsla(0, 0%, 100%, 0.71); width: 100%; height: 870px; border-radius: 5px;">
+                                <!-- DISINI -->
+                                <div style=" padding-top: 20px; overflow: scroll; height: 870px;" class="fontku">
+                                    <!--  modal   -->
+                                    <div id="open-modal" class="modal-window">
+                                        <div style="width: 800px; height: 300px;">
+                                            <a href="#" title="Close" class="modal-close">
+                                                <font size="5">&times;</font>
+                                            </a>
+                                            <h1>Data Pustakawan</h1>
+                                            <hr style="margin-bottom: 20px;">
+                                            <div>
+                                                <form action="php/code.php" method="POST">
+                                                    <table width="100%" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="125" align="left" valign="top">No.Member</td>
+                                                                <form action="php/code3.php" method="POST">
+                                                                    <td width="417" align="left" valign="top"
+                                                                        style="padding-right: 20px"><input type="text"
+                                                                            name="no_mem" placeholder="Nomor Member"
+                                                                            class="form-control" required /></td>
+                                                                    <td width="156" align="left" valign="top">Alamat
+                                                                    </td>
+                                                                    <td width="467" align="left" valign="top"
+                                                                        rowspan="2"><textarea name="alamat"
+                                                                            id="noresize" class="form-control" rows="3"
+                                                                            placeholder="Alamat" required></textarea>
+                                                                    </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Nama</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px"><input type="text"
+                                                                        name="nama" placeholder="Nama Lengkap"
+                                                                        class="form-control" required /></td>
+                                                                <td align="left" valign="top">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Tempat Lahir</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px"><input type="text"
+                                                                        name="tempat" placeholder="Tempat Lahir"
+                                                                        class="form-control" required /></td>
+                                                                <td align="left" valign="top">Tanggal Lahir</td>
+                                                                <td align="left" valign="top"><input type="date"
+                                                                        name="tanggal" placeholder="Tanggal Lahir"
+                                                                        class="form-control" required /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Kelamin</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px">
+                                                                    <select name="kelamin" id="select"
+                                                                        class="form-control" required>
+                                                                        <option value="Laki Laki">Laki Laki</option>
+                                                                        <option value="Perempuan">Perempuan</option>
+                                                                    </select></td>
+                                                                <td align="left" valign="top">No.Telp</td>
+                                                                <td align="left" valign="top"><input type="text"
+                                                                        name="telp" placeholder="Nomor Telp"
+                                                                        class="form-control" required /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Email</td>
+                                                                <td align="left" valign="top"
+                                                                    style="padding-right: 20px"><input type="email"
+                                                                        name="email" placeholder="Alamat Email"
+                                                                        class="form-control" required /></td>
+                                                                <td align="left" valign="top">Password</td>
+                                                                <td align="left" valign="top"><input type="password"
+                                                                        name="password" placeholder="Password"
+                                                                        class="form-control" required /></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <input type="submit" value="Simpan Member" name="Submit"
+                                                        class="btn btn-primary" style="float: right;" />
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- halaman -->
+                                    <form action="" method="POST" name="filter">
+                                        <div class="input-group col-md-5 col-md-offset-7"
+                                            style="float: left; margin-left: 15px;">
+                                            <span class="input-group-addon" id="basic-addon1"><span
+                                                    class="glyphicon glyphicon-search"></span></span>
+                                            <input type="text" name="input_cari" placeholder="Cari Disini"
+                                                class="form-control" style="width: 300px;" />
+                                        </div>
+                                        <input type="submit" name="cari" value="Cari" class="btn btn-primary"
+                                            style="float: left;" />
+                                        <input type="submit" name="tampil" value="Semua Data" class="btn btn-primary"
+                                            style="float: left; margin-left: 10px;" />
+                                    </form>
+                                    <a href="#open-modal"><button class="btn btn-primary" type="submit"
+                                            style="float: right; margin-right: 30px;">Tambah Data</button></a>
+                                    <br />
+                                    <div style="padding: 30px;">
+                                        <br>
+                                        <table border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 30px; text-align: center;">#</th>
+                                                    <th scope="col" style="width: 100px;">No.Member</th>
+                                                    <th scope="col" style="width: 150px;">Nama</th>
+                                                    <th scope="col" style="width: 200px;">TTL</th>
+                                                    <th scope="col" style="width: 100px;">Kelamin</th>
+                                                    <th scope="col" style="width: 100px;">No.Telp</th>
+                                                    <th scope="col" style="width: 300px;">Alamat</th>
+                                                    <th scope="col" style="width: 150px;">Email</th>
+                                                    <th scope="col"
+                                                        style="width: 200px; text-align: center; vertical-align : center;">
+                                                        Opsi</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td style="width: 30px; vertical-align: top; text-align: center;">1</td>
+                                                <td style="vertical-align: top;">
+                                                    <div style="margin-bottom: 30px;">6957200001</div>
+                                                </td>
+                                                <td style="vertical-align: top;">Rifky Lovanto</td>
+                                                <td style="vertical-align: top;">Bandung, 19-09-2001</td>
+                                                <td style="vertical-align: top;">Laki Laki</td>
+                                                <td style="vertical-align: top;">087816837566</td>
+                                                <td style="vertical-align: top;">GBI Blok Ebok No.55</td>
+                                                <td style="vertical-align: top;">rifkylovanto@gmail.com</td>
+                                                <td
+                                                    style="vertical-align: top; text-align: center; vertical-align : center;">
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 30px; vertical-align: top; text-align: center;">2</td>
+                                                <td style="vertical-align: top;">
+                                                    <div style="margin-bottom: 30px;">6957200002</div>
+                                                </td>
+                                                <td style="vertical-align: top;">Faisal Yahya</td>
+                                                <td style="vertical-align: top;">Bandung, 30-02-2000</td>
+                                                <td style="vertical-align: top;">Laki Laki</td>
+                                                <td style="vertical-align: top;">087294648291</td>
+                                                <td style="vertical-align: top;">Ujung Berung</td>
+                                                <td style="vertical-align: top;">faisalyahya@gmail.com</td>
+                                                <td
+                                                    style="vertical-align: top; text-align: center; vertical-align : center;">
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 30px; vertical-align: top; text-align: center;">3</td>
+                                                <td style="vertical-align: top;">
+                                                    <div style="margin-bottom: 30px;">6957200003</div>
+                                                </td>
+                                                <td style="vertical-align: top;">Devita Kania</td>
+                                                <td style="vertical-align: top;">Bandung, 29-10-2002</td>
+                                                <td style="vertical-align: top;">Perempuan</td>
+                                                <td style="vertical-align: top;">086371736111</td>
+                                                <td style="vertical-align: top;">Kiaracondong</td>
+                                                <td style="vertical-align: top;">kaniadevita@gmail.com</td>
+                                                <td
+                                                    style="vertical-align: top; text-align: center; vertical-align : center;">
+                                                    <a href=""><img src="../../images/icon/update.png" width="16"
+                                                            height="16" class="button2" style="margin-right: 10px;"></a>
+                                                    <a href=""><img src="../../images/icon/delete.png" width="16"
+                                                            height="16" class="button2"></a>
+                                                </td>
+                                            </tr>
+                                            <tfoot>
+                                                <tr>
+                                                    <th align="center" valign="middle" colspan="9">&nbsp;</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div align="center"
+                                style="background-color: hsla(0, 0%, 100%, 0.71); width: 90%; height: 550px; border-radius: 5px; margin-left: 30px;">
+                                <div id="wrapper" class="data">
+                                    <div id="menu">
+                                        <p class="welcome">Selamat Datang, <b>Rifky Lovanto</b></p>
+                                        <p class="logout"><a id="exit" href="#">Keluar Chat</a></p>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                    <div id="chatbox" style="margin-top: 10px;">
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:11:51) <b>osas</b>: sjdboabwnda<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:11:51) <b>osas</b>: <br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:11:56) <b>osas</b>: kbsdoankldwbna<br>
+                                        </div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:28:21) <b>osas</b>: asdws<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 02:35:55) <b>osas</b>: asdadas<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:07:47) <b>osas</b>: jasd9auwhamsdnaw<br>
+                                        </div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:25:14) <b>osas</b>: oiajdosidjauwhda<br>
+                                        </div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:31:22) <b>osas</b>: ahvsdiuabdas<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:33:02) <b>osas</b>: sdasdaw<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:34:13) <b>osas</b>: ksbdiuansdl<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:35:50) <b>osas</b>: jdaisjdbans<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:35:56) <b>osas</b>: ksndoaskdna<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:36:15) <b>osas</b>: kjiol<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:36:30) <b>osas</b>: uasbdijabnsd<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:41:40) <b>osas</b>: sdadasd<br></div>
+                                        <div class='msgln'><i>osas masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:43:23) <b>osas</b>: sdasdawd<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:43:27) <b>osas</b>: sdawasd<br></div>
+                                        <div class='msgln'><i>osas telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:44:04) <b></b>: iskdoasn<br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:44:22) <b>madDog</b>: sdawasda<br></div>
+                                        <div class='msgln'><i>madDog telah meninggalkan ruang obrolan.</i><br></div>
+                                        <div class='msgln'><i>madDog masuk ruang obrolan.</i><br></div>
+                                        <div class='msgln'>(2018-Oct-Mon / 03:46:36) <b>madDog</b>: sdawawsdw<br></div>
+                                        <div class='msgln'><i>madDog telah meninggalkan ruang obrolan.</i><br></div>
+                                    </div>
+
+                                    <form name="message" action="">
+                                        <input name="usermsg" type="text" id="usermsg" class="form-control" />
+                                        <input name="submitmsg" class="btn btn-primary" type="submit" id="submitmsg"
+                                            value="Kirim" style="width: 70%" />
+                                    </form>
+                                </div>
+                            </div>
+        </div>
+        <br>
+        <div class="data" align="center"
+            style="background-color: hsla(0, 0%, 100%, 0.71); width: 90%; height: 220px; border-radius: 5px; margin-left: 30px; padding-top: 15px;">
+            <font style="font-size: 14px; font-weight: bolder;">DATA ANDA</font>
+            <br>
+            <img src="../../images/icon/person.png" width="80px;" height="80px;" style="margin-top: 7px;">
+            <p style="font-weight: bolder; margin-top: 15px;">1302194068</p>
+            <p style="font-weight: bolder; margin-top: 10px;">lovanto</p>
+            <p style="font-weight: bolder; margin-top: 10px;">Rifky Lovanto</p>
+        </div>
+        <br>
+        <form action="../../index.html">
+            <button class="btn" type="submit"
+                style="width: 90%; margin-left: 30px; height: 50px; background-color: #D50000">
+                <font color="#fff" style="font-weight: bolder;">LOGOUT</font>
+            </button>
+        </form>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>
