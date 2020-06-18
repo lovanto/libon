@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Chat</title>
+    <link type="text/css" rel="stylesheet" href="chat/style2.css" />
+</head>
+<div id="loginform">
+    Klik masuk untuk dapat memulai percakapan public
+    <br><br>
+    <input type="text" value="<?=$user?>" class="form-control" placeholder="Nama" name="user" id="user"
+        style="width:90%;" readonly />
+    <br>
+    <input type="submit" class="btn btn-primary" name="enter" id="enter" value="Masuk" style="width:70%;" />
+</div>
+<div id="wrapper" class="data">
+    <div id="menu">
+        <p class="welcome">Selamat Datang, <b>Rifky Lovanto</b></p>
+        <p class="logout"><a id="exit" href="#">Keluar Chat</a></p>
+        <div style="clear:both"></div>
+    </div>
+    <div id="chatbox" style="margin-top: 10px;"></div>
+
+    <form name="message" action="">
+        <input name="usermsg" type="text" id="usermsg" class="form-control" />
+        <input name="submitmsg" class="btn btn-primary" type="submit" id="submitmsg" value="Kirim" style="width: 70%" />
+    </form>
+</div>
+</body>
+
+</html>
